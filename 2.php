@@ -21,6 +21,4 @@ if (strlen($name) > 3 && strpos($mail, '.') !== false && strpos($mail, '@') !== 
     echo "Accesso NEGATO!";
 }
 
-
-
 ?>
