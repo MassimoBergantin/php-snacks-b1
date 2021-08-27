@@ -50,7 +50,20 @@ $posts = [
         ]
     ],
 ];
- echo "{$key}"
 
- 
+while (current($posts)){
+    $k = key($posts);
+    echo $k.'<br/>';
+    while(current($posts[$k])){
+        $k2 =  key($posts[$k]);
+        while(current($posts[$k][$k2])){
+            echo key($posts[$k][$k2]).'<br/>';
+            echo current($posts[$k][$k2]).'<br/>';
+            next($posts[$k][$k2]).'<br/>';
+        }
+        next($posts[$k]);
+    }
+    next($posts);
+}
+
 ?>
